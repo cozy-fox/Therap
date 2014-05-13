@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="app" basedir="." default="build">
+
+    <description>
+        Contest Application (tomcat)
+    </description>
+
+    <property file="build.properties"/>
+
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="web.dir" value="${basedir}/web"/>
+    <property name="lib.dir" value="${basedir}/lib"/>
+    <property name="props.dir" value="${basedir}/props"/>
+    <property name="i18n.dir" value="${basedir}/i18n"/>
+
+    <property name="tomcat.lib" value="${tomcat.home}/lib"/>
+
+    <property name="classes.dir" value="${build.dir}/WEB-INF/classes"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="${tomcat.lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="init">
+        <mkdir dir="${classes.dir}"/>
+    </target>
+
+    <target name="resources" depends="init" description="prepares deployment resources">
+        <copy todir="${build.dir}">
+            <fileset dir="${web.dir}"/>
+        </copy>
+
+        <mkdir dir="${build.dir}/WEB-INF/lib"/>
+
+        <copy todir="${build.dir}/WEB-INF/lib">
+            <fileset dir="${lib.dir}">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${classes.dir}">
+            <fileset dir="${props.dir}"/>
+            <fileset dir="${i18n.dir}"/>
+        </copy>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac destdir="${classes.dir}"
+               classpathref="classpath"
+               srcdir="${src.dir}"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="build" depends="clean, resources, compile"/>
+
+    <target name="start">
+        <exec executable="${tomcat.home}/bin/catalina.sh">
+            <arg value="start"/>
+        </exec>
+    </target>
+
+    <target name="stop">
+        <exec executable="${tomcat.home}/bin/catalina.sh">
+            <arg value="stop"/>
+        </exec>
+    </target>
+
+</project>
