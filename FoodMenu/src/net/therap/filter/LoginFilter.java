@@ -21,13 +21,19 @@ public class LoginFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
         HttpSession session = ((HttpServletRequest) servletRequest).getSession(false);
+
         String requestedUri = ((HttpServletRequest) servletRequest).getRequestURI();
 
         if ((session == null || session.getAttribute("authenticatedUser") == null) && (requestedUri.contains("home") || requestedUri.contains("logout"))) {
+
             ((HttpServletResponse) servletResponse).sendRedirect("/helloWorld/login.html");
+
         } else if (session != null && session.getAttribute("authenticatedUser") != null && (requestedUri.contains("login") || requestedUri.contains("register"))) {
+
             ((HttpServletResponse) servletResponse).sendRedirect("/helloWorld/home.html");
+
         } else {
+
             filterChain.doFilter(servletRequest, servletResponse);
         }
     }

@@ -8,19 +8,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<fmt:setBundle basename="net.therap.properties.messages"/>
+<fmt:setBundle basename="properties.messages"/>
 
 <html>
 <head>
     <title><fmt:message key="login.title"/></title>
-    <link rel="stylesheet" type="text/css" href="../../css/login.css">
 </head>
 <body>
     <h1><fmt:message key="login.title"/></h1>
-    <form action="/login" method="POST">
-        <fmt:message key="login.userName"/><input type="text" name="user_name" placeholder="User Name">
-        <fmt:message key="login.userPass"/><input type="password" name="user_password" placeholder="Password">
-        <input type="submit" value="<fmt:message key="login.submit"/>">
-    </form>
+    <input type="text" name="user_name" placeholder="User Name">
+    <input type="password" name="user_password" placeholder="Password">
+    <input type="submit" value="<fmt:message key="login.submit"/>">
 </body>
 </html>
