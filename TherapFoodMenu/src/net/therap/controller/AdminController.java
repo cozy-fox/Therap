@@ -2,6 +2,7 @@ package net.therap.controller;
 
 import net.therap.service.FoodService;
 import net.therap.service.MealService;
+import net.therap.util.HelperClass;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -37,6 +39,9 @@ public class AdminController extends HttpServlet{
 
         request.setAttribute("currentBreakfastList", foodService.getBreakfastListForToday());
         request.setAttribute("currentLunchList", foodService.getLunchListForToday());
+
+        request.setAttribute("todaysDay", HelperClass.getDayNameFromDate(new Date()));
+        request.setAttribute("todaysDate", HelperClass.getTodaysDateOnly());
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/jsp/add_meal.jsp");
         requestDispatcher.forward(request, response);

@@ -1,0 +1,117 @@
+#home_container {
+    width: 700px;
+}
+
+#home_container h1 {
+    font-size: 155%;
+    font-weight: bold;
+    text-align: center;
+    width: 700px;
+    padding-top: 15px;
+}
+.meal_list_container {
+    width: 100%;
+    clear: both;
+}
+
+#breakfast_list {
+    width: 45%;
+    float: left;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+#lunch_list {
+    width: 45%;
+    float: right;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+#breakfast_list_add {
+    width: 45%;
+    float: left;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+#lunch_list_add {
+    width: 45%;
+    float: right;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font: 200 15px/1.5 "trebuchetMs", helvetica, sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+    border: none;
+}
+
+li {
+    text-decoration: none;
+    color: #000;
+    color: #000;
+    display: block;
+    width: 200px;
+
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li:hover {
+    font-size: 20px;
+    background: #f6f6f6;
+}
+
+input[type="checkbox"] {
+    color: #555;
+    height:15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #7f7e38;
+    background: #ffb500;
+    outline: 0;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    font: normal 14px/14px Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/**
+* Previous Meal Page's Table
+*/
+
+#previous_table {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+#previous_table tr, th, td {
+    border: 1px solid gray;
+}
+
+#previous_table col.mealListCol {
+    width: 40%;
+}
+
+#previous_table col#dateCol, col#dayCol {
+    text-align: center;
+}

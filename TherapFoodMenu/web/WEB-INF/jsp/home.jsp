@@ -12,9 +12,43 @@
 <html>
 <head>
     <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="<c:url value="../../css/style.css"/>"><!---->
 </head>
 <body>
-    You are logged in as <c:out value="${authenticatedUser.userName}"/>
-    This is home.jsp
+<div id="wrapper">
+    <div id="header">
+        <div id="links">
+            <a href="<fmt:message key="site.baseurl"/>logout">Logout</a>
+        </div>
+        <h1><fmt:message key="site.title"/></h1>
+
+    </div>
+    <div id="home_container">
+        <h1><fmt:message key="home.title"/>&nbsp;(<c:out value="${todaysDate}"/>&nbsp;-&nbsp;<c:out value="${todaysDay}"/>)</h1>
+        <div class="meal_list_container">
+
+            <div id="breakfast_list">
+                <h3><fmt:message key="home.breakfast.title"/></h3>
+                <ul>
+                    <c:forEach var="food" items="${currentBreakfastList}">
+                        <li><c:out value="${food.foodName}"/></li>
+                    </c:forEach>
+                </ul>
+            </div>
+
+            <div id="lunch_list">
+                <h3><fmt:message key="home.lunch.title"/></h3>
+                <ul>
+                    <c:forEach var="food" items="${currentLunchList}">
+                        <li><c:out value="${food.foodName}"/></li>
+                    </c:forEach>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p><fmt:message key="footer.text"/></p>
+    </div>
+</div>
 </body>
 </html>

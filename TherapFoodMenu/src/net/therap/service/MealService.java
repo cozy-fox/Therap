@@ -4,9 +4,11 @@ import net.therap.dao.FoodListDao;
 import net.therap.dao.MealListDao;
 import net.therap.domain.Food;
 import net.therap.domain.Meal;
+import net.therap.domain.MealCompact;
 import net.therap.util.HelperClass;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -53,4 +55,8 @@ public class MealService {
     }
 
 
+    public Map<String, MealCompact> getMealRowMapForLastMonth() {
+        Map<String, MealCompact> retMap = mealListDao.getBothMealListOfLastMonth();
+        return retMap;
+    }
 }

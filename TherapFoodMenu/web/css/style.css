@@ -1,0 +1,90 @@
+@import url("reset.css");
+@import url("fontface.css");
+@import url("login.css");
+@import url("home.css");
+
+body
+{
+    background-color: #d0d0d0;
+    color: #4f4f4f;
+    font-size: 14px;
+    font-family: "trebuchetMs", helvetica, sans-serif;
+}
+
+a
+{
+    text-decoration: underline;
+    color: #93B300;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: #fff;
+    /*background: #D3E378 url('../images/bbg1.gif') repeat-x;*/
+}
+
+strong
+{
+    background: inherit;
+    color: #50514D;
+}
+#links {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+#links a {
+    text-decoration: none;
+    color: #372ef8;
+    font-size: 90%;
+    text-decoration: underline;
+}
+
+
+#header{
+    margin-left: auto;
+    margin-right: auto;
+    width:700px;
+    height: 95px;
+    border-bottom: 1px solid #7f7e38;
+
+    background-color: #ffb500;
+    background-image: url("logo.gif");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+#header h1{
+    font-weight: bolder;
+    font-size: 200%;
+    text-align: center;
+    padding-top: 15px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    padding-top: 10px;
+}
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+
+    background: #fff;
+    /*box-shadow: 4px 0 4px -4px rgba(31, 31, 31, 0.8), -7px 0 8px -4px rgba(31, 31, 31, 0.8);*/
+    box-shadow: 4px 0 8px -4px rgba(31, 31, 31, 0.8), -7px 0 8px -8px rgba(31, 31, 31, 0.8);
+}
+
+#footer {
+    width: 700px;
+    font-size: 85%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #4f4f4f;
+    border-top: 1px solid darkgray;
+    clear: both;
+}

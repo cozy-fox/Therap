@@ -13,14 +13,25 @@
 <html>
 <head>
     <title><fmt:message key="login.title"/></title>
-    <link rel="stylesheet" type="text/css" href="../../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
-    <h1><fmt:message key="login.title"/></h1>
-    <form action="/login" method="POST">
-        <fmt:message key="login.userName"/><input type="text" name="user_name" placeholder="User Name">
-        <fmt:message key="login.userPass"/><input type="password" name="user_password" placeholder="Password">
-        <input type="submit" value="<fmt:message key="login.submit"/>">
-    </form>
+<div id="wrapper">
+    <div id="header">
+        <h1><fmt:message key="site.title"/></h1>
+    </div>
+    <div class="login">
+        <h1><fmt:message key="login.title"/></h1>
+        <form action="/login" method="POST">
+            <p><input type="text" name="user_name" placeholder="<fmt:message key="login.userName"/>"></p>
+            <p><input type="password" name="user_password" placeholder="<fmt:message key="login.userPass"/>"></p>
+            <input type="submit" value="<fmt:message key="login.submit"/>">
+        </form>
+    </div>
+
+    <div id="footer">
+        <p>A Footer! Just to make it look complete...</p>
+    </div>
+</div>
 </body>
 </html>

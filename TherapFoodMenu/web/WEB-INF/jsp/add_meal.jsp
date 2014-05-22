@@ -12,56 +12,65 @@
 <html>
 <head>
     <title>Admin Add Meal Page</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
-    <h1>Add Meal</h1>
+<div id="wrapper">
+    <div id="header">
+        <div id="links">
+            <a href="<fmt:message key="site.baseurl"/>addfood">Add Food</a>&nbsp;&nbsp;
+            <a href="<fmt:message key="site.baseurl"/>prev">Previous Meal</a>&nbsp;&nbsp;
+            <a href="<fmt:message key="site.baseurl"/>logout">Logout</a>
+        </div>
+        <h1><fmt:message key="site.title"/></h1>
 
-    <!--form action="/mealAdd" method="POST">
-        <input type="radio" name="meal_type" value="breakfast">Breakfast<br>
-        <input type="radio" name="meal_type" value="lunch">Lunch<br><br>
+    </div>
+    <div id="home_container">
+        <h1><fmt:message key="addmeal.title"/>&nbsp;(<c:out value="${todaysDate}"/>&nbsp;-&nbsp;<c:out value="${todaysDay}"/>)</h1>
+        <div class="meal_list_container">
+            <div id="breakfast_list">
+                <h3>Breakfast List For Today</h3>
+                <ul>
+                    <c:forEach var="food" items="${currentBreakfastList}">
+                        <li><c:out value="${food.foodName}"/></li>
+                    </c:forEach>
+                </ul>
+            </div>
 
-        <c:forEach var="food" items="${allFoodList}">
-            <input type="checkbox" name="foods" value='<c:out value="${food.foodId}"/>'> <c:out value="${food.foodName}"/></br>
-        </c:forEach>
+            <div id="lunch_list">
+                <h3>Lunch List For Today</h3>
+                <ul>
+                    <c:forEach var="food" items="${currentLunchList}">
+                        <li><c:out value="${food.foodName}"/></li>
+                    </c:forEach>
+                </ul>
+            </div>
+        </div>
+        <div class="meal_list_container">
+            <div id="breakfast_list_add">
+                <h3><fmt:message key="addmeal.add.breakfast"/></h3>
+                <form action="/mealAdd" method="POST">
+                    <c:forEach var="food" items="${availableBreakfastList}">
+                        <input type="checkbox" name="foods" value='<c:out value="${food.foodId}"/>'> <c:out value="${food.foodName}"/></br>
+                    </c:forEach>
+                    <input type="hidden" name="meal_type" value="breakfast">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
 
-        <input type="submit" value="Add">
-    </form-->
-
-    <h3>Breakfast List For Today</h3>
-    <ol>
-        <c:forEach var="food" items="${currentBreakfastList}">
-            <li><c:out value="${food.foodName}"/></li>
-        </c:forEach>
-    </ol>
-
-    <h3>Lunch List For Today</h3>
-    <ol>
-        <c:forEach var="food" items="${currentLunchList}">
-            <li><c:out value="${food.foodName}"/></li>
-        </c:forEach>
-    </ol>
-
-
-
-
-    <h3>Available Breakfast List For Today</h3>
-    <form action="/mealAdd" method="POST">
-    <c:forEach var="food" items="${availableBreakfastList}">
-        <input type="checkbox" name="foods" value='<c:out value="${food.foodId}"/>'> <c:out value="${food.foodName}"/></br>
-    </c:forEach>
-        <input type="hidden" name="meal_type" value="breakfast">
-        <input type="submit" value="Add">
-    </form>
-
-    <h3>Available Lunch List For Today</h3>
-    <form action="/mealAdd" method="POST">
-    <c:forEach var="food" items="${availableLunchList}">
-        <input type="checkbox" name="foods" value='<c:out value="${food.foodId}"/>'> <c:out value="${food.foodName}"/></br>
-    </c:forEach>
-        <input type="hidden" name="meal_type" value="breakfast">
-        <input type="submit" value="Add">
-    </form>
-
-
+            <div id="lunch_list_add">
+                <h3><fmt:message key="addmeal.add.lunch"/></h3>
+                <form action="/mealAdd" method="POST">
+                    <c:forEach var="food" items="${availableLunchList}">
+                        <input type="checkbox" name="foods" value='<c:out value="${food.foodId}"/>'> <c:out value="${food.foodName}"/></br>
+                    </c:forEach>
+                    <input type="hidden" name="meal_type" value="lunch">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer"><fmt:message key="footer.text"/></div>
+</div>
 </body>
 </html>

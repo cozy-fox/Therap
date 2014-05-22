@@ -1,7 +1,9 @@
 package net.therap.util;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,5 +27,23 @@ public class HelperClass {
         Date today = new Date();
         String todayString= new SimpleDateFormat("yyyy-MM-dd").format(today);
         return todayString;
+    }
+
+    public static String getDayNameFromDateString(String addedDate) {
+        SimpleDateFormat formatter = new SimpleDateFormat("EEE");
+        Date date = null;
+        try {
+            date = new SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH).parse(addedDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String dayString = formatter.format(date);
+        return dayString;
+    }
+
+    public static String getDayNameFromDate(Date addedDate) {
+        SimpleDateFormat formatter = new SimpleDateFormat("EEE");
+        String dayString = formatter.format(addedDate);
+        return dayString;
     }
 }

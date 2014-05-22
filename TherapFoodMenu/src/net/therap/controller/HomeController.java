@@ -4,6 +4,7 @@ import net.therap.domain.Food;
 import net.therap.domain.User;
 import net.therap.service.FoodService;
 import net.therap.service.MealService;
+import net.therap.util.HelperClass;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -57,6 +59,9 @@ public class HomeController extends HttpServlet {
 
             request.setAttribute("currentBreakfastList", breakfastList);
             request.setAttribute("currentLunchList", lunchList);
+
+            request.setAttribute("todaysDay", HelperClass.getDayNameFromDate(new Date()));
+            request.setAttribute("todaysDate", HelperClass.getTodaysDateOnly());
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home.jsp");
             requestDispatcher.forward(request, response);

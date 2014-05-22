@@ -12,6 +12,16 @@ public class MealRow {
     private String mealType;
     private long userId;
     private long foodId;
+    private String foodName;
+
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
+
     private String addedDate;
 
     public long getMealId() {
