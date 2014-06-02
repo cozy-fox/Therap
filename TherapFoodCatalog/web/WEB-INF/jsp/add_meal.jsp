@@ -8,11 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<fmt:setBundle basename="messages"/>
+<fmt:setBundle basename="net.therap.properties.messages"/>
 <html>
 <head>
     <title>Admin Add Meal Page</title>
-    <link rel="stylesheet" type="text/css" href="<c:url value="../../css/style.css"/>">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 <div id="wrapper">
@@ -50,7 +50,7 @@
         <div class="meal_list_container">
             <div id="breakfast_list_add">
                 <h3 style="text-align: left; margin-left: 15px; margin-bottom: 15px;"><fmt:message key="addmeal.add.breakfast"/></h3>
-                <form action="mealAdd" method="POST">
+                <form action="/mealAdd" method="POST">
                     <c:forEach var="food" items="${availableBreakfastList}">
                         <input type="checkbox" name="foods" value='<c:out value="${food.foodId}"/>'> <c:out value="${food.foodName}"/></br>
                     </c:forEach>
@@ -61,7 +61,7 @@
 
             <div id="lunch_list_add">
                 <h3 style="text-align: left; margin-left: 15px; margin-bottom: 15px;"><fmt:message key="addmeal.add.lunch"/></h3>
-                <form action="mealAdd" method="POST">
+                <form action="/mealAdd" method="POST">
                     <c:forEach var="food" items="${availableLunchList}">
                         <input type="checkbox" name="foods" value='<c:out value="${food.foodId}"/>'> <c:out value="${food.foodName}"/></br>
                     </c:forEach>

@@ -1,0 +1,22 @@
+apply plugin: 'war'
+apply plugin: 'java'
+
+webAppDirName = 'web/'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+    providedCompile 'javax.servlet:jsp-api:2.0'
+
+    runtime 'javax.servlet:jstl:1.2'
+}
+
+war {
+    from('src/main/resources/') {
+        include 'messages.properties'
+    }
+}

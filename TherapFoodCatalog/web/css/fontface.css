@@ -1,0 +1,11 @@
+@font-face
+{
+    font-family: trebuchetMs;
+    src: url('Trebuchet_MS.ttf');
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
