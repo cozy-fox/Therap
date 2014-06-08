@@ -1,32 +1,48 @@
-apply plugin: 'war'
 apply plugin: 'java'
+apply plugin: 'war'
 
 webAppDirName = 'web/'
+
+
+configurations {
+    ajc
+    aspects
+    ajInpath
+}
+
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-
-    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
-    providedCompile 'javax.servlet:jsp-api:2.0'
-
+    compile 'javax.servlet:javax.servlet-api:3.0.1'
     compile 'org.slf4j:slf4j-api:1.7.7'
     compile 'org.slf4j:slf4j-simple:1.7.7'
     compile 'ch.qos.logback:logback-core:1.1.2'
     compile 'ch.qos.logback:logback-classic:1.1.2'
 
     runtime 'javax.servlet:jstl:1.2'
+    runtime 'mysql:mysql-connector-java:5.1.30'
+    runtime 'opensymphony:sitemesh:2.4.2'
 }
 
-war {
-    from('src/main/resources/') {
-        include 'messages.properties'
+buildscript {
+    repositories {
+        maven {
+            url "https://maven.eveoh.nl/content/repositories/releases"
+        }
+    }
+    dependencies {
+        classpath "nl.eveoh:gradle-aspectj:1.4"
     }
 }
 
-task deploy(type: Copy) {
-    from 'build/libs/TherapFoodMenuGradle.war'
-    into '/home/sanjoy.saha/Drive/tomcat/apache-tomcat-7.0.53/webapps/'
+repositories {
+    mavenCentral()
 }
+
+project.ext {
+    aspectjVersion = '1.7.4'
+}
+apply plugin: 'aspectj'
