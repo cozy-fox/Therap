@@ -1,0 +1,69 @@
+2014-05-25 11:22:05 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 11:22:05 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 11:22:05 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 11:22:05 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 11:22:05 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:02:56 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:04:01 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:05:12 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:05:37 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:06:32 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:22:54 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:22:54 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:22:54 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:22:54 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:22:54 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:22:57 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list
+2014-05-25 13:23:22 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list
+2014-05-25 13:23:40 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:23:40 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:23:40 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:23:40 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:23:40 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:23:43 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list
+2014-05-25 13:27:12 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:27:20 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:27:20 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:27:20 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:27:20 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:27:20 INFO  DatabaseTemplate:47 - SELECT QUERY: SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:30:33 INFO  DatabaseTemplate:47 - SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:30:33 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:30:33 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:30:33 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:30:33 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:30:41 INFO  DatabaseTemplate:47 - SELECT * FROM food_list
+2014-05-25 13:30:43 INFO  DatabaseTemplate:47 - SELECT f_id, m_type, day_added, f_name FROM meal_list_tmp, food_list WHERE meal_list_tmp.f_id=food_list.id AND day_added BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() 
+2014-05-25 13:30:45 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:30:45 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:30:45 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:30:45 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:30:46 INFO  DatabaseTemplate:47 - SELECT f_id, m_type, day_added, f_name FROM meal_list_tmp, food_list WHERE meal_list_tmp.f_id=food_list.id AND day_added BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() 
+2014-05-25 13:30:47 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:30:47 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:30:47 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:30:47 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:30:49 INFO  DatabaseTemplate:47 - SELECT * FROM food_list
+2014-05-25 13:30:51 INFO  DatabaseTemplate:47 - SELECT f_id, m_type, day_added, f_name FROM meal_list_tmp, food_list WHERE meal_list_tmp.f_id=food_list.id AND day_added BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() 
+2014-05-25 13:32:11 INFO  DatabaseTemplate:47 - SELECT * FROM user WHERE uname = 'sanjay'
+2014-05-25 13:32:11 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:32:11 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:32:23 INFO  DatabaseTemplate:47 - SELECT * FROM user WHERE uname = 'safat'
+2014-05-25 13:32:23 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:32:23 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-25 13:32:23 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-25')
+2014-05-25 13:32:23 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-25')
+2014-05-27 09:28:29 INFO  DatabaseTemplate:47 - SELECT * FROM user WHERE uname = 'safat'
+2014-05-27 09:28:30 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-27')
+2014-05-27 09:28:30 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-27')
+2014-05-27 09:28:30 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-27')
+2014-05-27 09:28:30 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-27')
+2014-05-27 09:28:39 INFO  DatabaseTemplate:47 - SELECT * FROM meal_list_tmp WHERE day_added = '2014-05-27' and m_type = 'breakfast'
+2014-05-27 09:28:39 INFO  DatabaseTemplate:77 - INSERT INTO meal_list_tmp(id,f_id,m_type,u_id,day_added) VALUES(?,?,?,?,?)
+2014-05-27 09:28:39 INFO  DatabaseTemplate:77 - INSERT INTO meal_list_tmp(id,f_id,m_type,u_id,day_added) VALUES(?,?,?,?,?)
+2014-05-27 09:28:39 INFO  DatabaseTemplate:77 - INSERT INTO meal_list_tmp(id,f_id,m_type,u_id,day_added) VALUES(?,?,?,?,?)
+2014-05-27 09:28:39 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-27')
+2014-05-27 09:28:39 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id NOT IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-27')
+2014-05-27 09:28:39 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='breakfast' AND day_added='2014-05-27')
+2014-05-27 09:28:39 INFO  DatabaseTemplate:47 - SELECT * FROM food_list WHERE id IN ( SELECT f_id FROM meal_list_tmp WHERE m_type='lunch' AND day_added='2014-05-27')
+2014-05-27 09:28:55 INFO  DatabaseTemplate:47 - SELECT * FROM food_list
